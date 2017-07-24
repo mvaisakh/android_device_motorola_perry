@@ -2,17 +2,19 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),perry)
 include $(CLEAR_VARS)
 
-FIRMWARE_KEYMASTER_IMAGES := \
-    keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
+FIRMWARE_ADSP_IMAGES := \
+    adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 adsp.b06 \
+    adsp.b07 adsp.b08 adsp.b09 adsp.b10 adsp.b11 adsp.b12 adsp.b13 \
+    adsp.mdt
 
-FIRMWARE_KEYMASTER_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/keymaster/,$(notdir $(FIRMWARE_KEYMASTER_IMAGES)))
-$(FIRMWARE_KEYMASTER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Keymaster Firmware link: $@"
+FIRMWARE_ADSP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_MODEM_IMAGES)))
+$(FIRMWARE_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "ADSP Firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_KEYMASTER_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_ADSP_SYMLINKS)
 
 FIRMWARE_MBA_IMAGES := \
     mba.mbn.gz
