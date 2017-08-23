@@ -66,6 +66,14 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8937 \
+    libbson \
+    Snap \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8937 \
