@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
