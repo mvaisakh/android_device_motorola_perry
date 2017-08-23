@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8937
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
