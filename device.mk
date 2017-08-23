@@ -100,6 +100,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8937 \
+    android.hardware.light@2.0-impl
+
 # LineageActions
 PRODUCT_PACKAGES += \
     LineageActions
