@@ -127,6 +127,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
 
+# Launcher3
+PRODUCT_PACKAGES += \
+    Launcher3
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8937 \
@@ -158,6 +162,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml\
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media/media_profiles_8956.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_8956.xml \
+
+# Netutils
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -191,8 +199,17 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     ueventd.rc
 
-#PRODUCT_PACKAGES += \
-#    android.hardware.sensors@1.0-impl
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libshim_ril \
+    libprotobuf-cpp-full \
+    libxml2 \
+    libshim_ril
+    rild_socket
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -225,7 +242,18 @@ PRODUCT_PACKAGES += \
     wificond \
     wifilogd \
     tcpdump \
-    wcnss_service
+    wcnss_service \
+    libwpa_client
 
+# Wifi Symlinks
+PRODUCT_PACKAGES += \
+    WCNSS_qcom_cfg.ini \
+    WCNSS_qcom_wlan_nv.bin \
+    WCNSS_qcom_wlan_nv_Argentina.bin \
+    WCNSS_qcom_wlan_nv_Brazil.bin \
+    WCNSS_qcom_wlan_nv_India.bin \
+    WCNSS_wlan_dictionary.dat
+
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
 # Inherit vendor
 $(call inherit-product, vendor/motorola/perry/perry-vendor.mk)
