@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2011 Motorola Mobility, Inc.
+ */
+
 #ifndef MOTOROLA_SENSORHUB_INTERFACE_H
 #define MOTOROLA_SENSORHUB_INTERFACE_H
 
