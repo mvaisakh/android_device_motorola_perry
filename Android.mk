@@ -16,6 +16,20 @@ $(FIRMWARE_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_ADSP_SYMLINKS)
 
+FIRMWARE_FINGERPRINT_IMAGES := \
+    fpctzappfingerprint.b00 fpctzappfingerprint.b01 fpctzappfingerprint.b02 \
+    fpctzappfingerprint.b03 fpctzappfingerprint.b04 fpctzappfingerprint.b05 \
+    fpctzappfingerprint.b06 fpctzappfingerprint.mdt
+
+FIRMWARE_FINGERPRINT_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_FINGERPRINT_IMAGES)))
+$(FIRMWARE_FINGERPRINT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Fingerprint Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_FINGERPRINT_SYMLINKS)
+
 FIRMWARE_MBA_IMAGES := \
     mba.mbn.gz
 
