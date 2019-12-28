@@ -43,4 +43,9 @@ TARGET_KERNEL_CONFIG := perry_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+
 -include vendor/motorola/perry/BoardConfigVendor.mk
