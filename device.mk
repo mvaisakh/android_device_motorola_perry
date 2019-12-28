@@ -89,5 +89,9 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     ueventd.rc
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine-perry.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
 # Inherit vendor
 $(call inherit-product, vendor/motorola/perry/perry-vendor.mk)
