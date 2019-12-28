@@ -1,5 +1,5 @@
 DEVICE_PATH := device/motorola/perry
-BOARD_VENDOR := motorola
+BOARD_VENDOR := motorola-qcom
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := perry,perry_retail
