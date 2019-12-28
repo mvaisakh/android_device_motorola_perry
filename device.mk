@@ -66,6 +66,11 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Panel Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/panel/qdcm_calib_data_mipi_mot_video_ofilm_720p_499.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_video_ofilm_720p_499.xml \
+    $(LOCAL_PATH)/configs/panel/qdcm_calib_data_mipi_mot_video_tianma_720p_499.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_video_tianma_720p_499.xml
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
