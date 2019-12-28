@@ -72,7 +72,17 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    ueventd.qcom.rc \
+    init.qcom.fm.sh \
+    wlan_carrier_bin.sh
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.rc \
+    init.mmi.usb.rc \
+    init.qcom.rc \
+    ueventd.rc
 
 # Inherit vendor
 $(call inherit-product, vendor/motorola/perry/perry-vendor.mk)
