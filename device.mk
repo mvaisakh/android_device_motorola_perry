@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Camera Configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/imx219_chromatix.xml :$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx219_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/imx219_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx219_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695fa0_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mot_ov5695_l5695fa0_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/msm8917_mot_perry_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8917_mot_perry_camera.xml \
     $(LOCAL_PATH)/configs/camera/s5k4h8_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h8_chromatix.xml
@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
     libshim_ril \
     libprotobuf-cpp-full \
     libxml2 \
-    libshim_ril
+    libshim_ril \
     rild_socket
 
 # Sensor
