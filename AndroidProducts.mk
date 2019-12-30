@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_perry.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_perry-user \
+    lineage_perry-userdebug \
+    lineage_perry-eng
